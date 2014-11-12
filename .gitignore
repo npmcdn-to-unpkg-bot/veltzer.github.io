@@ -6,6 +6,7 @@ __pycache__
 
 # templar generated
 /.tdefs.config
+/web
 
 # stamps of various kinds
 /*.stamp

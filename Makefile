@@ -32,6 +32,9 @@ ifeq ($(DO_CHECKHTML),1)
 ALL+=$(HTMLCHECK)
 endif # DO_CHECKHTML
 
+WEB_DIR:=../$(tdefs.project_name)-gh-pages
+COPY_FOLDERS:=static web
+
 #########
 # rules #
 #########
@@ -57,3 +60,11 @@ $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEP)
 	$(Q)tidy -errors -q -utf8 $(SOURCES_HTML)
 	$(Q)mkdir -p $(dir $@)
 	$(Q)touch $(HTMLCHECK)
+
+.PHONY: install
+install: all $(ALL_DEP)
+	$(info doing [$@])
+	$(Q)-for folder in $(COPY_FOLDERS); do rm -rf $(WEB_DIR)/$$folder; done
+	$(Q)for folder in $(COPY_FOLDERS); do cp -r $$folder $(WEB_DIR); done
+	$(Q)cp support/redirector.html $(WEB_DIR)/index.html
+	#$(Q)cd $(WEB_DIR); git commit -a -m "new version"; git push
