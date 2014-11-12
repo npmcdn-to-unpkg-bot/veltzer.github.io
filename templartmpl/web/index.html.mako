@@ -8,7 +8,7 @@
 		<meta name="Keywords" content="${tdefs.personal_fullname}, ${tdefs.personal_slug}, ${tdefs.project_name}, ${', '.join(tdefs.project_keywords)}"/>
 	</head>
 	<body>
-		<h1>Welcome to The ${tdefs.personal_fullname}'s github web site</h1>
+		<h1>Welcome to ${tdefs.personal_fullname}'s github web site</h1>
 
 		<h2>I still don't know what I want to store at this page</h2>
 		<p>
