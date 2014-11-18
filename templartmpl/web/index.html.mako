@@ -12,8 +12,8 @@
 
 		<h2>I still don't know what I want to store at this page</h2>
 		<p>
-		Copyright ${tdefs.personal_fullname}, ${tdefs.project_copyright_years}
-		<a href="mailto:${tdefs.personal_email}">${tdefs.personal_email}</a>
+			Copyright ${tdefs.personal_fullname}, ${tdefs.project_copyright_years}
+			<a href="mailto:${tdefs.personal_email}">${tdefs.personal_email}</a>
 		</p>
 	</body>
 </html>
