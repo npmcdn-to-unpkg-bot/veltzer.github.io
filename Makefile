@@ -17,7 +17,7 @@ ALL+=$(HTMLCHECK)
 all: $(ALL)
 endif # DO_CHECKHTML
 
-WEB_DIR:=../$(tdefs.project_name)-gh-pages
+WEB_DIR:=../veltzer.github.io-gh-pages
 COPY_FOLDERS:=static web
 
 #########
@@ -37,3 +37,9 @@ install: all $(ALL_DEP)
 	$(Q)for folder in $(COPY_FOLDERS); do cp -r $$folder $(WEB_DIR); done
 	$(Q)cp support/redirector.html $(WEB_DIR)/index.html
 	$(Q)cd $(WEB_DIR); git commit -a -m "new version"; git push
+
+.PHONY: debug_me
+debug_me:
+	$(info doing [$@])
+	$(info WEB_DIR is $(WEB_DIR))
+	$(info COPY_FOLDERS is $(COPY_FOLDERS))
