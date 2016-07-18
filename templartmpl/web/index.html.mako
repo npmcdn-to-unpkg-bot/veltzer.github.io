@@ -12,10 +12,13 @@
 
 		<h2>Here are some of my projects at github:</h2>
 		<ul>
+			<li><a href="https://veltzer.github.io/demos-linux">demos-linux</a></li>
 			<li><a href="https://veltzer.github.io/jschess">jschess</a></li>
 			<li><a href="https://veltzer.github.io/openbook">openbook</a></li>
+			<li><a href="https://veltzer.github.io/riddling">riddling</a></li>
+			<!--
 			<li><a href="https://veltzer.github.io/fastlog">fastlog</a></li>
-			<li><a href="https://veltzer.github.io/demos-linux">demos-linux</a></li>
+			-->
 		</ul>
 		<p>
 			Copyright ${tdefs.personal_fullname}, ${tdefs.project_copyright_years}
