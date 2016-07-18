@@ -16,6 +16,7 @@ def populate(d):
 		'open source',
 		'free source',
 	]
+	d.project_google_analytics_tracking_id='UA-80925041-1'
 
 def getdeps():
 	return [
