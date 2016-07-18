@@ -10,7 +10,13 @@
 	<body>
 		<h1>Welcome to ${tdefs.personal_fullname}'s github web site</h1>
 
-		<h2>I still don't know what I want to store at this page</h2>
+		<h2>Here are some of my projects at github:</h2>
+		<ul>
+			<li><a href="https://veltzer.github.io/jschess">jschess</a></li>
+			<li><a href="https://veltzer.github.io/openbook">openbook</a></li>
+			<li><a href="https://veltzer.github.io/fastlog">fastlog</a></li>
+			<li><a href="https://veltzer.github.io/demos-linux">demos-linux</a></li>
+		</ul>
 		<p>
 			Copyright ${tdefs.personal_fullname}, ${tdefs.project_copyright_years}
 			<a href="mailto:${tdefs.personal_email}">${tdefs.personal_email}</a>

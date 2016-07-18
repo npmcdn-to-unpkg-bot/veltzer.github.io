@@ -10,3 +10,6 @@ __pycache__
 
 # stamps of various kinds
 /*.stamp
+
+# node packages
+/node_modules
