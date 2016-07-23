@@ -5,10 +5,7 @@
 __pycache__
 
 # templar generated
-/web
-
-# stamps of various kinds
-/*.stamp
+/out
 
 # node packages
 /node_modules
