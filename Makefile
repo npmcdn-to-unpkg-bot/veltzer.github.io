@@ -11,10 +11,9 @@ DO_CHECKHTML:=1
 ########
 SOURCES_HTML_MAKO:=$(shell find templartmpl \( -type f -or -type l \) -and -name "*.html.mako" 2> /dev/null)
 SOURCES_HTML:=$(shell make_helper rmfdas $(SOURCES_HTML_MAKO))
-HTMLCHECK:=html.stamp
+HTMLCHECK:=out/html.stamp
 ifeq ($(DO_CHECKHTML),1)
 ALL+=$(HTMLCHECK)
-all: $(ALL)
 endif # DO_CHECKHTML
 
 WEB_DIR:=../veltzer.github.io-gh-pages
@@ -23,10 +22,12 @@ COPY_FOLDERS:=static web
 #########
 # rules #
 #########
+# do not touch this rule
+all: $(ALL)
 $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)tidy -errors -q -utf8 $(SOURCES_HTML)
-	$(Q)./node_modules/htmlhint/bin/htmlhint $(SOURCES_HTML) > /dev/null
+	$(Q)node_modules/htmlhint/bin/htmlhint $(SOURCES_HTML) > /dev/null
 	$(Q)mkdir -p $(dir $@)
 	$(Q)touch $(HTMLCHECK)
 
