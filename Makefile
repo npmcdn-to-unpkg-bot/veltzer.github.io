@@ -16,9 +16,6 @@ ifeq ($(DO_CHECKHTML),1)
 ALL+=$(HTMLCHECK)
 endif # DO_CHECKHTML
 
-WEB_DIR:=../veltzer.github.io-gh-pages
-COPY_FOLDERS:=static web
-
 #########
 # rules #
 #########
@@ -31,16 +28,11 @@ $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEP)
 	$(Q)mkdir -p $(dir $@)
 	$(Q)touch $(HTMLCHECK)
 
-.PHONY: install
-install: all $(ALL_DEP)
+.PHONY: gh-pages
+gh-pages: $(ALL) $(ALL_DEPS)
 	$(info doing [$@])
-	$(Q)rm -rf $(WEB_DIR)/*
-	$(Q)for folder in $(COPY_FOLDERS); do cp -r $$folder $(WEB_DIR); done
-	$(Q)cp support/redirector.html $(WEB_DIR)/index.html
-	$(Q)cd $(WEB_DIR); git commit -a -m "new version"; git push
+	$(Q)node_modules/gh-pages/bin/gh-pages --dist out/web
 
 .PHONY: debug_me
 debug_me:
 	$(info doing [$@])
-	$(info WEB_DIR is $(WEB_DIR))
-	$(info COPY_FOLDERS is $(COPY_FOLDERS))

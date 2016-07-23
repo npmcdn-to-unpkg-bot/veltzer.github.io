@@ -1,2 +1,4 @@
 - use pdmt for this project and get ridd of the makefile altogether.
 - make a better favicon for this project.
+- we are running htmlhint(1) wrong and supressing all of its output.
+	fix this.
