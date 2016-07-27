@@ -31,7 +31,7 @@ $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEP)
 .PHONY: gh-pages
 gh-pages: $(ALL) $(ALL_DEPS)
 	$(info doing [$@])
-	$(Q)node_modules/gh-pages/bin/gh-pages --dist out/web --branch master
+	$(Q)node_modules/gh-pages/bin/gh-pages --dist out/web --branch master 2> /dev/null
 
 .PHONY: debug_me
 debug_me:
