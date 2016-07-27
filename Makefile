@@ -23,10 +23,9 @@ endif # DO_CHECKHTML
 all: $(ALL)
 $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEP)
 	$(info doing [$@])
-	$(Q)tidy -errors -q -utf8 $(SOURCES_HTML)
-	$(Q)node_modules/htmlhint/bin/htmlhint $(SOURCES_HTML) > /dev/null
-	$(Q)mkdir -p $(dir $@)
-	$(Q)touch $(HTMLCHECK)
+	$(Q)make_helper wrapper-silent node_modules/htmlhint/bin/htmlhint $(SOURCES_HTML)
+	$(Q)make_helper touch-mkdir $@
+#$(Q)tidy -errors -q -utf8 $(SOURCES_HTML)
 
 .PHONY: my-gh-pages
 my-gh-pages: $(ALL) $(ALL_DEPS)
