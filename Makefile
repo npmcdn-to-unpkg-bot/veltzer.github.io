@@ -28,8 +28,8 @@ $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEP)
 	$(Q)mkdir -p $(dir $@)
 	$(Q)touch $(HTMLCHECK)
 
-.PHONY: gh-pages
-gh-pages: $(ALL) $(ALL_DEPS)
+.PHONY: my-gh-pages
+my-gh-pages: $(ALL) $(ALL_DEPS)
 	$(info doing [$@])
 	$(Q)node_modules/gh-pages/bin/gh-pages --dist out/web --branch master 2> /dev/null
 
