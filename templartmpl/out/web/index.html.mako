@@ -18,7 +18,18 @@
 			<li><a href="https://veltzer.github.io/jschess">jschess</a></li>
 			<li><a href="https://veltzer.github.io/openbook">openbook</a></li>
 			<li><a href="https://veltzer.github.io/riddling">riddling</a></li>
+			<li><a href="https://veltzer.github.io/keynote">keynote</a></li>
+			<li><a href="https://veltzer.github.io/slides">slides</a></li>
+			<li><a href="https://veltzer.github.io/templar">templar</a></li>
+			<li><a href="https://veltzer.github.io/pdmt">pdmt</a></li>
+			<li><a href="https://veltzer.github.io/scheduler">scheduler</a></li>
 		</ul>
+		<p>
+			I would appreciate donations so that I could use my time to work on the project of your choice.
+			If you do donate and would like me to work on some specific project then be sure to mention them
+			in your donation remark on paypal.
+		</p>
+		${tdefs.project_paypal_donate_button_snipplet}
 		<p>
 			Copyright ${tdefs.personal_fullname}, ${tdefs.project_copyright_years}
 			<a href="mailto:${tdefs.personal_email}">${tdefs.personal_email}</a>
