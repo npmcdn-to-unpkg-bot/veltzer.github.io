@@ -27,7 +27,7 @@
 		${tdefs.project_google_analytics_snipplet}
 	</head>
 	<body>
-		<div data-ng-app="MyApp" data-ng-cloak layout="column" layout-fill>
+		<div data-ng-app="MyApp" data-ng-cloak layout="column">
 			<header>
 				<md-toolbar class="md-toolbar" layout="row" layout-padding>
 					<md-button class="md-button">
@@ -38,9 +38,24 @@
 					</md-button>
 				</md-toolbar>
 			</header>
-			<main class="md-padding" flex>
-				<md-subheader class="md-primary">Unread Messages</md-subheader>
-				<h2>Here are some of my projects at github:</h2>
+			<main flex ng-controller="AppCtrl">
+				<!--
+				<md-toolbar layout="row" class="md-hue-2">
+					<div class="md-toolbar-tools">
+						<span>Here are some of my projects at github:</span>
+					</div>
+				</md-toolbar>
+				-->
+				<md-content>
+					<md-list flex>
+						<md-subheader class="md-sticky">Here are some of my projects at github</md-subheader>
+						<md-list-item class="md-1-line" ng-repeat="project in projects" ng-click="null">
+							<h3>{{ project.name }}</h3>
+						</md-list-item>
+					</md-list>
+				</md-content>
+				<!--
+				<md-subheader class="md-primary">Here are some of my projects at github:</md-subheader>
 				<ul>
 					<li><a href="https://veltzer.github.io/demos-linux">demos-linux</a></li>
 					<li><a href="https://veltzer.github.io/fastlog">fastlog</a></li>
@@ -53,6 +68,7 @@
 					<li><a href="https://veltzer.github.io/pdmt">pdmt</a></li>
 					<li><a href="https://veltzer.github.io/scheduler">scheduler</a></li>
 				</ul>
+				-->
 			</main>
 			<footer>
 				<md-toolbar class="md-toolbar, md-subhead" md-scroll-shrink layout="row" layout-align="center center">
