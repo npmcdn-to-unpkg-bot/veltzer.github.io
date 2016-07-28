@@ -1,3 +1,4 @@
+TEMPLAR_GHPAGES_BRANCH:=master
 include /usr/share/templar/make/Makefile
 
 ##############
@@ -26,11 +27,6 @@ $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEP)
 	$(Q)make_helper wrapper-silent node_modules/htmlhint/bin/htmlhint $(SOURCES_HTML)
 	$(Q)make_helper touch-mkdir $@
 #$(Q)tidy -errors -q -utf8 $(SOURCES_HTML)
-
-.PHONY: my-gh-pages
-my-gh-pages: $(ALL) $(ALL_DEPS)
-	$(info doing [$@])
-	$(Q)node_modules/gh-pages/bin/gh-pages --dist out/web --branch master 2> /dev/null
 
 .PHONY: debug_me
 debug_me:

@@ -1,6 +1,3 @@
-- remove the gh-pages support in my makefiles and rely
-	on the support in templar but pass the branch to which to push.
-
 - use pdmt for this project and get ridd of the makefile altogether.
 - make a better favicon for this project.
 - we are running htmlhint(1) wrong and supressing all of its output.
