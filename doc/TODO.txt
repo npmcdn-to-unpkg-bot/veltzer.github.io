@@ -6,4 +6,3 @@
 	my basic info.
 
 - use pdmt for this project and get ridd of the makefile altogether.
-- make a better favicon for this project.
