@@ -30,7 +30,7 @@
 
 	</head>
 	<body>
-		<div data-ng-app="MyApp" data-ng-cloak layout="column">
+		<div data-ng-app="MyApp" data-ng-cloak layout="column" style="min-height: 100vh">
 			<header>
 				<md-toolbar class="md-toolbar" layout="row" layout-padding>
 					<md-button class="md-button">
@@ -52,7 +52,7 @@
 					</md-tabs>
 				</md-toolbar>
 			</header>
-			<main ng-controller="AppCtrl" layout="row" layout-align="center">
+			<main ng-controller="AppCtrl" layout="row" layout-align="center" style="flex: 1">
 				<md-content>
 					<md-list>
 						<md-subheader class="md-sticky">Here are some of my projects at github</md-subheader>
