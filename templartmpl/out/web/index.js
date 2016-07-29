@@ -4,34 +4,44 @@
 	app.controller('AppCtrl', function($scope) {
 		$scope.projects=[
 			{
-				name: 'demos-linux'
+				name: 'demos-linux',
+				description: 'this is description'
 			},
 			{
-				name: 'fastlog'
+				name: 'fastlog',
+				description: 'this is description'
 			},
 			{
-				name: 'jschess'
+				name: 'jschess',
+				description: 'this is description'
 			},
 			{
-				name: 'openbook'
+				name: 'openbook',
+				description: 'this is description'
 			},
 			{
-				name: 'riddling'
+				name: 'riddling',
+				description: 'this is description'
 			},
 			{
-				name: 'keynote'
+				name: 'keynote',
+				description: 'this is description'
 			},
 			{
-				name: 'slides'
+				name: 'slides',
+				description: 'this is description'
 			},
 			{
-				name: 'templar'
+				name: 'templar',
+				description: 'this is description'
 			},
 			{
-				name: 'pdmt'
+				name: 'pdmt',
+				description: 'this is description'
 			},
 			{
-				name: 'scheduler'
+				name: 'scheduler',
+				description: 'this is description'
 			}
 		];
 	});

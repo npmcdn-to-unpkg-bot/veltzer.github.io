@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>${tdefs.project_long_description}</title>
 		<link rel="shortcut icon" href="favicon.ico"/>
+
+		<!-- meta data -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="Description" content="${tdefs.project_long_description}"/>
 		<meta name="Keywords" content="${tdefs.personal_fullname}, ${tdefs.personal_slug}, ${tdefs.project_name}, ${', '.join(tdefs.project_keywords)}"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		${tdefs.project_google_analytics_snipplet}
 
 		<!-- angular -->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
@@ -15,16 +19,15 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-messages.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
 		<!-- angular material -->
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc.5/angular-material.min.css">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc.5/angular-material.min.css"/>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc.5/angular-material.min.js"></script>
 		<!-- material icons from google -->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
 		<!-- our code -->
 		<script type="text/javascript" src="index.js"></script>
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="index.css"/>
 
-		${tdefs.project_google_analytics_snipplet}
 	</head>
 	<body>
 		<div data-ng-app="MyApp" data-ng-cloak layout="column">
@@ -38,43 +41,32 @@
 					</md-button>
 				</md-toolbar>
 			</header>
-			<main flex ng-controller="AppCtrl">
-				<!--
-				<md-toolbar layout="row" class="md-hue-2">
-					<div class="md-toolbar-tools">
-						<span>Here are some of my projects at github:</span>
-					</div>
-				</md-toolbar>
-				-->
+			<main ng-controller="AppCtrl" layout="row" layout-align="center">
 				<md-content>
-					<md-list flex>
+					<md-list>
 						<md-subheader class="md-sticky">Here are some of my projects at github</md-subheader>
-						<md-list-item class="md-1-line" ng-repeat="project in projects" ng-click="null">
-							<h3>{{ project.name }}</h3>
+						<md-list-item class="md-2-line" ng-repeat="project in projects" layout="row" style="align-items: stretch">
+							<div class="md-list-item" style="justify-content: center" layout="column">
+								<md-icon class="md-avatar" md-svg-src="social-github.svg"/>
+							</div>
+							<div class="md-list-item-text">
+								<h3>{{project.name}}</h3>
+								<h4>{{project.description}}</h4>
+							</div>
+							<div class="md-list-item" layout="column">
+								<md-button style="text-transform: none" ng-href="https://github.com/veltzer/{{project.name}}" target="_blank">github</md-button>
+								<md-button style="text-transform: none" ng-href="https://veltzer.github.io/{{project.name}}" target="_blank">webpage</md-button>
+							</div>
 						</md-list-item>
 					</md-list>
 				</md-content>
-				<!--
-				<md-subheader class="md-primary">Here are some of my projects at github:</md-subheader>
-				<ul>
-					<li><a href="https://veltzer.github.io/demos-linux">demos-linux</a></li>
-					<li><a href="https://veltzer.github.io/fastlog">fastlog</a></li>
-					<li><a href="https://veltzer.github.io/jschess">jschess</a></li>
-					<li><a href="https://veltzer.github.io/openbook">openbook</a></li>
-					<li><a href="https://veltzer.github.io/riddling">riddling</a></li>
-					<li><a href="https://veltzer.github.io/keynote">keynote</a></li>
-					<li><a href="https://veltzer.github.io/slides">slides</a></li>
-					<li><a href="https://veltzer.github.io/templar">templar</a></li>
-					<li><a href="https://veltzer.github.io/pdmt">pdmt</a></li>
-					<li><a href="https://veltzer.github.io/scheduler">scheduler</a></li>
-				</ul>
-				-->
 			</main>
 			<footer>
-				<md-toolbar class="md-toolbar, md-subhead" md-scroll-shrink layout="row" layout-align="center center">
+				<md-toolbar class="md-toolbar md-subhead" md-scroll-shrink layout="row" layout-align="center center">
 					<div>
-					Copyright ${tdefs.personal_fullname}, ${tdefs.project_copyright_years}, <a href="mailto:${tdefs.personal_email}">${tdefs.personal_email}</a>
+					Copyright ${tdefs.personal_fullname}, ${tdefs.project_copyright_years},
 					</div>
+					<md-button ng-href="mailto:${tdefs.personal_email}" target="_blank" style="text-transform: none">${tdefs.personal_email}</md-button>
 				</md-toolbar>
 			</footer>
 		</div>
