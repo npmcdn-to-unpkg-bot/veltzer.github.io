@@ -36,9 +36,9 @@
 					<md-button class="md-button">
 						<i class="material-icons" style="vertical-align: middle;font-size: 34px">home</i>
 					</md-button>
-					<md-button class="md-button" md-no-ink style="outline:none">
+					<div>
 						<span style="text-transform: none; font-size: 34px; vertical-align: middle;">${tdefs.personal_fullname}'s github web site</span>
-					</md-button>
+					</div>
 				</md-toolbar>
 			</header>
 			<main ng-controller="AppCtrl" layout="row" layout-align="center">
