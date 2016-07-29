@@ -19,6 +19,7 @@
 				name: 'openbook',
 				description: 'this is description'
 			},
+			/*
 			{
 				name: 'riddling',
 				description: 'this is description'
@@ -43,6 +44,7 @@
 				name: 'scheduler',
 				description: 'this is description'
 			}
+			*/
 		];
 	});
 })();

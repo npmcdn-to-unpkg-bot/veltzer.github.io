@@ -39,6 +39,17 @@
 					<div>
 						<span style="text-transform: none; font-size: 34px; vertical-align: middle;">${tdefs.personal_fullname}'s github web site</span>
 					</div>
+					<md-tabs class="md-primary" data-md-center-tabs>
+						<md-tab class="md-tab" id="tab1" data-md-active>
+							<md-tab-label>about me</md-tab-label>
+						</md-tab>
+						<md-tab class="md-tab" id="tab2">
+							<md-tab-label>github projects</md-tab-label>
+						</md-tab>
+						<md-tab class="md-tab" id="tab3">
+							<md-tab-label>donate</md-tab-label>
+						</md-tab>
+					</md-tabs>
 				</md-toolbar>
 			</header>
 			<main ng-controller="AppCtrl" layout="row" layout-align="center">
