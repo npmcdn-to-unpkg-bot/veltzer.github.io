@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>${tdefs.project_long_description}</title>
-		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="icon" href="favicon.ico?v=2"/>
 
 		<!-- meta data -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
