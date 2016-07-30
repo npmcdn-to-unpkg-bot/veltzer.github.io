@@ -1,8 +1,13 @@
+now:
+- use github javascript API to show all of my projects instead of the hardcoded code.
+
+build todos:
+- use pdmt for this project and get ridd of the makefile altogether.
+
+total goals:
 - use angular js and models to show:
 	all the companies that I taught.
 	all the certifications that I have.
 	all the courses that I taught.
 	all my links.
 	my basic info.
-
-- use pdmt for this project and get ridd of the makefile altogether.
