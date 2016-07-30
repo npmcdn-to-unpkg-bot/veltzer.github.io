@@ -1,4 +1,5 @@
 now:
+- indicate whether we are loading or not in the screen that is loading.
 - show stuff as cards and not list. imporve appearance.
 - make it so the tab works.
 - make the donate tab.
