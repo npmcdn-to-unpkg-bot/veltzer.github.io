@@ -3,6 +3,11 @@ now:
 - make it so the tab works.
 - make the donate tab.
 - make the about me tab get data via myworld-api.
+- add a reload and synchronized button like in google keep.
+	This will let me know if the ajax is ok or not.
+	Do a button that indicates that data is downloading.
+- only show a webpage for a project if a webpage exists.
+- show number of commits and other data as well.
 
 build todos:
 - use pdmt for this project and get ridd of the makefile altogether.
