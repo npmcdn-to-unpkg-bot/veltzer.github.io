@@ -1,5 +1,8 @@
 now:
-- use github javascript API to show all of my projects instead of the hardcoded code.
+- show stuff as cards and not list. imporve appearance.
+- make it so the tab works.
+- make the donate tab.
+- make the about me tab get data via myworld-api.
 
 build todos:
 - use pdmt for this project and get ridd of the makefile altogether.

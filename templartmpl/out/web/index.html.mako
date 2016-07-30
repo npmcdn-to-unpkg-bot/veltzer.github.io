@@ -24,6 +24,9 @@
 		<!-- material icons from google -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
+		<!-- github module -->
+		<script type="text/javascript" src="https://npmcdn.com/github-api/dist/GitHub.bundle.min.js"></script>
+
 		<!-- our code -->
 		<script type="text/javascript" src="index.js"></script>
 		<link rel="stylesheet" href="index.css"/>
@@ -55,7 +58,6 @@
 			<main ng-controller="AppCtrl" layout="row" layout-align="center" style="flex: 1">
 				<md-content>
 					<md-list>
-						<md-subheader class="md-sticky">Here are some of my projects at github</md-subheader>
 						<md-list-item class="md-2-line" ng-repeat="project in projects" layout="row" style="align-items: stretch">
 							<div class="md-list-item" style="justify-content: center" layout="column">
 								<md-icon class="md-avatar" md-svg-src="social-github.svg"/>
