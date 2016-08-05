@@ -65,6 +65,15 @@
 							<div class="md-list-item-text">
 								<h3>{{project.name}}</h3>
 								<h4>{{project.description}}</h4>
+								<!--
+								<h4>{{project.clone_url}}</h4>
+								<h4>{{project.homepage}}</h4>
+								<h4>{{project.size}}</h4>
+								<h4>{{project.stargazers_count}}</h4>
+								<h4>{{project.watchers_count}}</h4>
+								<h4>{{project.created_at}}</h4>
+								<h4>{{project.updated_at}}</h4>
+								-->
 							</div>
 							<div class="md-list-item" layout="column">
 								<md-button style="text-transform: none" ng-href="https://github.com/veltzer/{{project.name}}" target="_blank">github</md-button>
