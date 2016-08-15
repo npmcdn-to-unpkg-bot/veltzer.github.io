@@ -35,6 +35,7 @@ endif
 # rules #
 #########
 # do not touch this rule
+.PHONY: all
 all: $(ALL) $(ALL_DEPS)
 
 $(TOOLS): scripts/install.py scripts/tools.py
