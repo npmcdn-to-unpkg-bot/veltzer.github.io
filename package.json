@@ -1,0 +1,32 @@
+{
+  "name": "veltzer-github",
+  "version": "1.0.0",
+  "description": "veltzer-github is my private site at github",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gh-pages": "latest",
+    "htmlhint": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veltzer/demos-angular.git"
+  },
+  "keywords": [
+    "demos",
+    "angular.js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veltzer/issues"
+  },
+  "homepage": "https://veltzer.github.io"
+}
