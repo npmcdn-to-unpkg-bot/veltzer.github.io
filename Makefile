@@ -37,9 +37,9 @@ endif
 # do not touch this rule
 all: $(ALL) $(ALL_DEPS)
 
-$(TOOLS): scripts/tools.py
+$(TOOLS): scripts/install.py scripts/tools.py
 	$(info doing [$@])
-	$(Q)scripts/tools.py
+	$(Q)scripts/install.py
 	$(Q)make_helper touch-mkdir $@
 
 $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEPS)
