@@ -1,0 +1,10 @@
+{
+	"packages": [
+		{
+			"name": "tidy"
+		},
+		{
+			"name": "templar"
+		}
+	]
+}
