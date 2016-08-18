@@ -38,9 +38,9 @@ endif
 .PHONY: all
 all: $(ALL) $(ALL_DEPS)
 
-$(TOOLS): scripts/tools.py
+$(TOOLS):
 	$(info doing [$@])
-	$(Q)scripts/tools.py
+	$(Q)templar_cmd install_deps
 	$(Q)make_helper touch-mkdir $@
 
 $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEPS)
