@@ -26,7 +26,7 @@ endif # DO_CHECKHTML
 
 # dependency on the makefile itself
 ifeq ($(DO_ALL_DEPS),1)
-ALL_DEPS:=Makefile $(TOOLS)
+ALL_DEPS:=Makefile
 else
 ALL_DEPS:=
 endif
@@ -38,9 +38,9 @@ endif
 .PHONY: all
 all: $(ALL) $(ALL_DEPS)
 
-$(TOOLS): scripts/install.py scripts/tools.py
+$(TOOLS): scripts/tools.py
 	$(info doing [$@])
-	$(Q)scripts/install.py
+	$(Q)scripts/tools.py
 	$(Q)make_helper touch-mkdir $@
 
 $(HTMLCHECK): $(SOURCES_HTML) $(ALL_DEPS)
