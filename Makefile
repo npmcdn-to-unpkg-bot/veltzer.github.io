@@ -8,14 +8,17 @@ include /usr/share/templar/make/Makefile
 OUT:=out
 # do you want to validate html?
 DO_CHECKHTML:=1
-# what is the stamp file for the tools?
-TOOLS:=$(OUT)/tools.stamp
 # do you want dependency on the makefile itself ?
 DO_ALL_DEPS:=1
+# build the tools?
+DO_TOOLS:=1
 
 ########
 # code #
 ########
+# what is the stamp file for the tools?
+TOOLS:=$(OUT)/tools.stamp
+
 SOURCES_HTML_MAKO:=$(shell find templartmpl \( -type f -or -type l \) -and -name "*.html.mako" 2> /dev/null)
 SOURCES_HTML:=$(shell make_helper rmfdas $(SOURCES_HTML_MAKO))
 HTMLCHECK:=$(OUT)/html.stamp
@@ -29,7 +32,11 @@ ifeq ($(DO_ALL_DEPS),1)
 ALL_DEPS:=Makefile
 else
 ALL_DEPS:=
-endif
+endif # DO_ALL_DEPS
+
+ifeq ($(DO_TOOLS),1)
+ALL_DEPS+=$(OUT)/tools.stamp
+endif # DO_TOOLS
 
 #########
 # rules #
